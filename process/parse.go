@@ -8,8 +8,8 @@ import (
     "github.com/pxtrez/wordwa11-app/utils"
 )
 
-func parse(data []byte) string {
-    var thumbnail_url URL
+func Parse(data []byte) string {
+    var thumbnail_url utils.URL
 
     err := json.Unmarshal(data, &thumbnail_url)
     if err != nil {

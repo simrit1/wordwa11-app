@@ -2,6 +2,7 @@ package main
 
 import (
     "fmt"
+    "strings"
 
     "github.com/pxtrez/wordwa11-app/process"
     "github.com/toqueteos/webbrowser"
@@ -14,10 +15,10 @@ func main() {
     fmt.Scanln(&link)
 
     fmt.Println("[wordwa11] Fetching...")
-    data := fetch(link)
+    data := process.Fetch(link)
 
     fmt.Println("[wordwa11] Parsing...")
-    answer_page := parse(data)
+    answer_page := process.Parse(data)
 
 
     fmt.Println("[wordwa11] Answers can be found at: " + answer_page)

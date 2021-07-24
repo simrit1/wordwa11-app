@@ -6,7 +6,7 @@ import (
     "net/http"
 )
 
-func fetch(link string) []byte {
+func Fetch(link string) []byte {
     API_URL := "https://wordwall.net/api/oembed?url=" + link + "&format=json"
     
     resp, err := http.Get(API_URL)
